@@ -41,7 +41,7 @@ body {
 h2 {
     text-align: center;
     font-family: var(--font2);
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: #2e3382;
     margin-bottom: 20px;
 }
@@ -130,13 +130,14 @@ h2 {
 
 .bienvenida {
     display: block;
-    padding: 5% 10% 17vh 10%;
+    padding: 5vh 10% 17vh 10%;
     margin: 0 auto;
     max-width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     position: relative;
     background-color: #c7c2dce8;
     animation: slideInY 1s forwards;
+    text-align: center;
 }
 
 .bienvenida::before {
@@ -153,7 +154,7 @@ h2 {
     background-color: #c7c2dc00;
 
     left: 0;
-    bottom: -50px;
+    bottom: -1vh;
     z-index: -1;
     animation: slideInY 4s forwards;
 }
@@ -272,7 +273,7 @@ h2 {
     align-items: center;
     justify-content: center;
     padding: 1.5rem 0.5rem 2rem 0.5rem;
-    text-align: center;
+
 }
 
 .proyectos__titulo {
@@ -292,8 +293,8 @@ h2 {
     word-spacing: 0.01rem;
     line-height: 1.4rem;
     /* padding-bottom: 20px; */
-     margin: 2px; 
-    text-align: left;
+    margin: 2px;
+
 }
 
 
@@ -336,6 +337,12 @@ h2 {
 }
 
 @media (min-width: 800px) {
+
+    h2 {
+   
+    font-size: 2.4rem;
+   
+}
     .encabezado__titulo {
         font-size: 2.5rem;
     }
@@ -381,6 +388,15 @@ h2 {
 
     .bienvenida {
         padding: 3% 10% 15vw 10%;
+        text-align: left;
+
+        
+   
+    font-size: 1.4rem;
+   
+    
+    
+    
 
     }
 
@@ -396,13 +412,14 @@ h2 {
 
 @media (min-width: 1200px) {
 
-      .container {
+    .container {
         padding: 0 6vw;
-        
+
     }
-        .proyectos {
-   
+
+    .proyectos {
+
         gap: 5vw;
     }
-    
+
 }
