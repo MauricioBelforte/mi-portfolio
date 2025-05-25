@@ -214,12 +214,14 @@ h3 {
 
 
 .proyectos__tarjeta {
+    display: flex;
+    flex-direction: column;
     background: #fff;
     border-radius: 40px;
     /*  padding: 1rem; */
     border-style: solid;
-    border-width: 2.5vw;
-    border-color: #e4e4f2;
+    border-width: 1.5vw;
+    border-color: #e6e5eb;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 
     transition: all ease-in-out 0.5s;
@@ -237,7 +239,7 @@ h3 {
 .proyectos__tarjeta:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.334);
-    border-color: #5f5693;
+    border-color: #aca7c7;
 
     transition: all ease-in-out 0.5s;
 }
@@ -281,6 +283,12 @@ h3 {
     justify-content: center;
     padding: 1.5vw 2.5vw 2vw 2.5vw;
     text-align: center;
+    /*Use el flex-grow:1 para poder poner los botones al final
+    Yo lo entiendo asi, habia espacio disponible en el .proyectos__tarjeta al poner flex-grow:1 se lo llevo el contenido,
+    pero le puse flex-grow:1 tambien a los enlaces para que se llevan ese espacio que conseguimos*/
+    flex-grow: 1;
+    flex-basis: 0;
+
 
 }
 
@@ -317,18 +325,23 @@ h3 {
 
 
 .proyectos__enlaces {
+
+    width: 90%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     gap: 4vw;
-    margin: 3vw;
+    margin: 3vw 2vw;
+    /*Le puse flex-grow:1 para que se lleve el espacio que conseguimos cuando usamos flex-grow:1 a su padre que era el contenido*/
+    flex-grow: 1;
+    flex-basis: 0;
 
 }
 
 .proyectos__enlace {
-    color: #e8e8e9;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 0.95em;
+    font-size: 0.8em;
     padding: 5px 10px;
     font-family: var(--font1);
     font-weight: 600;
@@ -339,23 +352,37 @@ h3 {
     letter-spacing: 0.05em;
     word-spacing: 0em;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #bdc5e4;
-    border: 5px solid #f6f6fe;
+    border-radius: 80px;
+    background-color: #9e9ead;
+    border-style: solid;
+    border-color: #f6f6fb;
+    /* background-color: #bdc5e4;
+    border: 5px solid #f6f6fe; */
     transition: all ease-in-out 0.5s;
+
+
+    /**Si tenemos items unos mas grandes que otros por defecto, es decir no le definimos ancho ni alto, se adaptan al contenido 
+    y ahi el flex grow no define el tamaño total de cada elemento.* *Para este caso se puede agregar la propiedad `flex-basis:0` 
+    para que todos los elementos queden del mismo tamaño**/
+
+    flex-grow: 1;
+    flex-basis: 0;
+    max-width: 30vw;
 
 }
 
 .proyectos__enlace:hover {
-
-    background: var(--principal-violeta);
+    background-color: #695ead;
+    /* background: var(--principal-violeta); */
     padding: 5px 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition: all ease-in-out 0.5s;
-    border-color: #dfdffa;
+    border-color: #e6e6ff;
+    /* border-color: #dfdffa; */
     color: #fff;
 }
+
 
 
 .sobre-mi,
@@ -431,12 +458,12 @@ h3 {
 
     .proyectos__tarjeta {
         /* font-size: 1.1vw; */
-        border-width: 1.5vw;
+        border-width: 0.7vw;
     }
 
     .proyectos__figure {
         /*  height: 22vw;*/
-        
+
         max-height: 23vw;
     }
 
@@ -471,6 +498,17 @@ h3 {
         /* margin: 2px; */
     }
 
+    .proyectos__enlaces {
+        width: 90%;
+        gap: 2vw;
+
+    }
+
+    .proyectos__enlace {
+        font-size: 0.8rem;
+        max-width: 17vw;
+    }
+
 
 }
 
@@ -495,4 +533,17 @@ h3 {
         margin-top: 1vw;
         margin-bottom: 0.5vw;
     }
+
+
+    .proyectos__enlaces {
+
+        gap: 3vw;
+
+    }
+
+    .proyectos__enlace {
+        font-size: 0.9rem;
+
+    }
+
 }
