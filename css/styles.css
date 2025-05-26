@@ -124,7 +124,7 @@ h3 {
     background-color: #4b33c4;
     left: 0;
     top: 0;
-    z-index: 20;
+    z-index: 5;
     animation: slideInX 4s forwards;
 
 }
@@ -174,6 +174,7 @@ h3 {
     }
 }
 
+
 @keyframes slideInX {
     from {
         transform: translateX(-100%);
@@ -188,8 +189,9 @@ h3 {
 
 
 .seccion {
+    position: relative;
     max-width: 100%;
-    padding: 2vh 5vw;
+    /*  padding: 5vh 10vw 10vh 10vw; */
 
     background-color: var(--fondo-claro);
 }
@@ -198,7 +200,7 @@ h3 {
 
 
 .container {
-    padding: 0 5vw;
+    padding: 5vh 10vw 10vh 10vw;
     animation: slideInY 4s forwards;
 }
 
@@ -223,7 +225,8 @@ h3 {
     border-width: 1.5vw;
     border-color: #e6e5eb;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-
+    justify-content: space-between;
+    align-content: space-between;
     transition: all ease-in-out 0.5s;
 
 
@@ -246,7 +249,7 @@ h3 {
 
 .proyectos__figure {
     /* width: 100%; */
-
+    height: inherit;
     padding: 0;
     /*
     display: flex;
@@ -264,10 +267,10 @@ h3 {
 }
 
 .proyectos__imagen {
-    /* width: 100%; */
+
     height: 100%;
     width: 100%;
-    /*  object-fit: contain; */
+    object-fit: cover;
     display: block;
     margin-bottom: 10px;
 
@@ -281,7 +284,8 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 1.5vw 2.5vw 2vw 2.5vw;
+    margin-top: 1vw;
+    padding: 0.5vw 2.5vw 2vw 2.5vw;
     text-align: center;
     /*Use el flex-grow:1 para poder poner los botones al final
     Yo lo entiendo asi, habia espacio disponible en el .proyectos__tarjeta al poner flex-grow:1 se lo llevo el contenido,
@@ -290,14 +294,48 @@ h3 {
     flex-basis: 0;
 
 
+    opacity: 1;
+    position: relative;
 }
+
+.proyectos__tarjeta:hover .proyectos__contenido::before {
+    /*El hover en el ancestro que era la card, creo un pseudoelemento en el nieto! Espectacular*/
+    content: "";
+    position: absolute;
+    top: 0;
+    /* left: 50%; */
+
+    padding: auto;
+    width: 30%;
+    height: 2px;
+    background: linear-gradient(to right, #abaedc, #abaedc);
+
+    /* border-radius: 5px; */
+    animation: slideIn-Y 0.8s forwards;
+    align-self: center;
+}
+
+@keyframes slideIn-Y {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+
 
 .proyectos__titulo {
     margin-top: 2vw;
     margin-bottom: 2vw;
     color: #2e3382;
     font-size: 1.6rem;
-
+    position: relative;
 }
 
 .proyectos__descripcion {
@@ -385,13 +423,23 @@ h3 {
 
 
 
-.sobre-mi,
+.sobre-mi {
+
+    background: #c1d0ef;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+
+    font-size: 1.4rem;
+    z-index: 10;
+}
+
 .contacto {
+
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-    padding: 24px;
-    margin-bottom: 32px;
+    padding: 20vh;
+    z-index: 10;
 }
 
 .contacto__info {
@@ -422,7 +470,7 @@ h3 {
 
     .seccion {
 
-        padding: 2vh 4vw;
+        /* padding: 2vh 4vw 10vh 4vw; */
     }
 
     .barra-navegacion {
@@ -447,7 +495,7 @@ h3 {
     }
 
     .container {
-        padding: 0 1vw;
+        /* padding: 0 1vw; */
         animation: slideInY 4s forwards;
     }
 
@@ -462,17 +510,18 @@ h3 {
     }
 
     .proyectos__figure {
-        /*  height: 22vw;*/
+        height: 20vw;
 
-        max-height: 23vw;
+        max-height: 30vw;
     }
 
     .proyectos__imagen {
         width: 100%;
 
         /* object-fit: cover; */
-        height: auto;
+        /* height: auto; */
         margin-bottom: 10px;
+        object-position: top;
 
 
 
@@ -507,6 +556,7 @@ h3 {
     .proyectos__enlace {
         font-size: 0.8rem;
         max-width: 17vw;
+
     }
 
 
@@ -514,10 +564,10 @@ h3 {
 
 @media (min-width: 1200px) {
 
-    .container {
+    /*    .container {
         padding: 0 6vw;
 
-    }
+    } */
 
     .proyectos {
         /* grid-template-columns: repeat(3, 1fr); */
