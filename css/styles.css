@@ -201,7 +201,7 @@ h3 {
 
 .container {
     padding: 5vh 10vw 10vh 10vw;
-    animation: slideInY 4s forwards;
+    /* animation: slideInY 4s forwards; */
 }
 
 
@@ -426,11 +426,22 @@ h3 {
 .sobre-mi {
 
     background: #c1d0ef;
-
+    padding: 10vh 10vw 15vh 10vw;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 
     font-size: 1.4rem;
     z-index: 10;
+}
+
+.sobre-mi p {
+    margin: 1rem 0rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.01rem;
+}
+
+.sobre-mi h2 {
+
+    margin-bottom: 2rem;
 }
 
 .contacto {
@@ -496,7 +507,7 @@ h3 {
 
     .container {
         /* padding: 0 1vw; */
-        animation: slideInY 4s forwards;
+       
     }
 
     .proyectos {
@@ -559,7 +570,11 @@ h3 {
 
     }
 
-
+    .sobre-mi p {
+    margin: 1rem 0rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.01rem;
+}
 }
 
 @media (min-width: 1200px) {
