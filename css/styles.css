@@ -298,23 +298,23 @@ h3 {
     position: relative;
 }
 
-.proyectos__tarjeta:hover .proyectos__contenido::before {
-    /*El hover en el ancestro que era la card, creo un pseudoelemento en el nieto! Espectacular*/
+/*El hover en el ancestro que era la card, creo un pseudoelemento en el nieto! Espectacular*/
+/* .proyectos__tarjeta:hover .proyectos__contenido::before {
     content: "";
     position: absolute;
     top: 0;
-    /* left: 50%; */
+    
 
     padding: auto;
-    width: 30%;
-    height: 2px;
-    background: linear-gradient(to right, #abaedc, #abaedc);
+    width: 20%;
+    height: 3px;
+    background: linear-gradient(to right, #464c9e, #3c4294);
 
-    /* border-radius: 5px; */
+    
     animation: slideIn-Y 0.8s forwards;
     align-self: center;
 }
-
+ */
 @keyframes slideIn-Y {
     from {
         transform: translateY(-10px);
@@ -331,8 +331,8 @@ h3 {
 
 
 .proyectos__titulo {
-    margin-top: 2vw;
-    margin-bottom: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 0.5vw;
     color: #2e3382;
     font-size: 1.6rem;
     position: relative;
@@ -544,8 +544,8 @@ h3 {
 
     .proyectos__titulo {
         /* font-size: 2rem; */
-        margin-top: 2vw;
-        margin-bottom: 1vw;
+        margin-top: 1vw;
+        margin-bottom: 0.5vw;
     }
 
     .proyectos__descripcion {
@@ -595,8 +595,8 @@ h3 {
 
     .proyectos__titulo {
         font-size: 2rem;
-        margin-top: 1vw;
-        margin-bottom: 0.5vw;
+        margin-top: 0.5vw;
+        margin-bottom: 0.25vw;
     }
 
 
