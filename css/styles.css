@@ -130,8 +130,9 @@ h3 {
 }
 
 .bienvenida {
-    display: block;
-    padding: 5vh 10% 17vh 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 10vw 0vh 10vw;
     margin: 0 auto;
     max-width: 100%;
     font-size: 1.2rem;
@@ -140,6 +141,25 @@ h3 {
     animation: slideInY 1s forwards;
     text-align: center;
 }
+
+
+.bienvenida__imagen {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    overflow: hidden;
+    padding-top: 5vh;
+    margin: 0 auto;
+
+}
+
+.bienvenida__imagen img {
+    width: 100%;
+    height: auto;
+
+
+}
+
 
 .bienvenida::before {
     content: "";
@@ -446,15 +466,23 @@ h3 {
 
 .contacto {
 
-    background: #fff;
-    border-radius: 10px;
+    background: #191919;
+
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
-    padding: 20vh;
+    padding: 10vh;
     z-index: 10;
 }
 
-.contacto__info {
+.contacto h2 {
+    text-align: center;
+    color: #958ac9;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contacto p {
     margin-top: 10px;
+    color: azure;
 }
 
 .contacto__enlace {
@@ -463,7 +491,7 @@ h3 {
     margin-right: 15px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 900px) {
 
     h2 {
 
@@ -489,12 +517,40 @@ h3 {
     }
 
     .bienvenida {
-        padding: 3% 10% 15vw 10%;
+        flex-direction: row;
+        padding: 3% 3vw 1vw 8vw;
         text-align: left;
         font-size: 1.4rem;
 
+        justify-content: center;
+
 
     }
+
+    .bienvenida__texto {
+        flex-grow: 1;
+        padding-right: 5vw;
+        padding-bottom: 10vw;
+
+    }
+
+    .bienvenida__imagen {
+        position: relative;
+        flex-grow: 1;
+        overflow: visible;   
+        max-width: 30vw;
+        padding-top: 0;
+
+    }
+
+    .bienvenida__imagen img {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        width: 32vw;
+    }
+
 
     .bienvenida::before {
         background-image: url('../img/bg-curve-desktop.svg');
@@ -507,7 +563,7 @@ h3 {
 
     .container {
         /* padding: 0 1vw; */
-       
+
     }
 
     .proyectos {
@@ -569,12 +625,12 @@ h3 {
         max-width: 17vw;
 
     }
-    
+
     .sobre-mi p {
-    margin: 1rem 0rem;
-    font-size: 1.4rem;
-    letter-spacing: 0.01rem;
-}
+        margin: 1rem 0rem;
+        font-size: 1.4rem;
+        letter-spacing: 0.01rem;
+    }
 }
 
 @media (min-width: 1200px) {
