@@ -1,6 +1,6 @@
 :root {
     --secundario-violeta-oscuro: #070439;
-    --principal-violeta: hsl(239, 24%, 59%);
+    --principal-violeta: #958ac9;
     --terceario-azul: #2e3382;
     --moderate-cyan: hsl(170, 45%, 43%);
     --light-grayish-blue: #f6f6fe;
@@ -22,6 +22,9 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
 
 body {
     font-family: var(--font2);
@@ -58,14 +61,26 @@ h3 {
 }
 
 .encabezado {
+    position: relative;
     background: #222;
     color: #fff;
-    padding: 32px 0 16px 0;
+    padding: 3vh 0 1vh 0;
     text-align: center;
-    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
 
+.encabezado__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 20;
+    flex-basis: 0;
+    order: 1;
+}
 
 .encabezado__titulo {
     margin: 0;
@@ -105,8 +120,97 @@ h3 {
     color: var(--principal-violeta);
     background-color: #1b1b1c;
     border-radius: 10px;
-    transition: color ease-in-out 1s;
+    transition: color ease-in-out 0.2s;
 
+}
+
+.encabezado__redes {
+
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    flex-grow: 1;
+    justify-self: end;
+    gap: 3vh;
+    margin-right: 1vw;
+    order: 2;
+
+}
+
+.encabezado__redes a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.icono {
+    display: inline-block;
+    width: 4vh;
+    height: 4vh;
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.icono:hover {
+    fill: var(--principal-violeta);
+    transition: fill ease-in-out 0.2s;
+}
+
+.icono-github {
+    color: #fff;
+}
+
+.icono-github:hover {
+    fill: var(--principal-violeta);
+
+}
+
+.icono-linkedin {
+    color: #fff;
+}
+
+.icono-linkedin:hover {
+    fill: var(--principal-violeta);
+
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    background-color: #181818;
+    color: #fff;
+
+
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    position: absolute;
+
+    left: -20%;
+    transform: translateX(-100%);
+
+
+
+
+    white-space: nowrap;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 .contenido-principal {
@@ -499,12 +603,51 @@ h3 {
 
     }
 
+    .encabezado__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 50;
+        flex-basis: 0;
+        order: 1;
+    }
+
     .encabezado__titulo {
         font-size: 2.5rem;
     }
 
     .encabezado__subtitulo {
         font-size: 1.2rem;
+    }
+
+    .encabezado__redes {
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: end;
+
+        gap: 2vw;
+        margin-bottom: 3vh;
+        margin-right: 2vw;
+        order: 2;
+
+    }
+
+    .icono {
+
+        width: 5vh;
+        height: 5vh;
+
+    }
+
+    .tooltip-text {
+
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+
     }
 
     .seccion {
@@ -537,7 +680,7 @@ h3 {
     .bienvenida__imagen {
         position: relative;
         flex-grow: 1;
-        overflow: visible;   
+        overflow: visible;
         max-width: 30vw;
         padding-top: 0;
 
