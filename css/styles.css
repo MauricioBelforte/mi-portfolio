@@ -72,6 +72,34 @@ h3 {
 
 }
 
+.encabezado__logo {
+
+    position: absolute;
+    /* centrar el logo en la parte izquierda */
+    left: 0;
+    top: 0;
+
+    bottom: 1vh;
+    margin: 1vw;
+
+
+    width: 8vh;
+    height: 8vh;
+    /* border-style: solid;
+    border-radius: 20%; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-self: start;
+
+}
+
+.encabezado__logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 .encabezado__nav {
     display: flex;
     flex-direction: column;
