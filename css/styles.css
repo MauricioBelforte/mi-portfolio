@@ -92,6 +92,13 @@ h3 {
     align-items: center;
     justify-self: start;
 
+    transition: transform ease-in-out 0.5s;
+
+}
+
+.encabezado__logo:hover {
+    transform: scale(1.1);
+    transition: transform ease-in-out 0.5s;
 }
 
 .encabezado__logo img {
