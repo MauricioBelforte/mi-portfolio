@@ -1,6 +1,6 @@
 :root {
     --secundario-violeta-oscuro: #070439;
-    --principal-violeta: #958ac9;
+    --principal-violeta: #aaaadc;
     --terceario-azul: #2e3382;
     --moderate-cyan: hsl(170, 45%, 43%);
     --light-grayish-blue: #f6f6fe;
@@ -148,14 +148,15 @@ h3 {
     transition: color 0.2s;
     font-size: 1rem;
     padding: 10px;
-
+    border-radius: 10px;
+    transition: all ease-in-out 0.2s;
 }
 
 .barra-navegacion__enlace:hover {
-    color: var(--principal-violeta);
-    background-color: #1b1b1c;
-    border-radius: 10px;
-    transition: color ease-in-out 0.2s;
+    color: #e2e1e7;
+    background-color: #6767ba;
+
+    transition: all ease-in-out 0.5s;
 
 }
 
@@ -172,6 +173,7 @@ h3 {
     justify-self: end;
     gap: 3vh;
     margin-right: 1vw;
+    margin-top: 1vw;
     order: 2;
 
 }
@@ -188,28 +190,44 @@ h3 {
     height: 4vh;
     fill: currentColor;
     vertical-align: middle;
+    transition: fill ease-in-out 0.2s;
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.815));
 }
 
 .icono:hover {
     fill: var(--principal-violeta);
-    transition: fill ease-in-out 0.2s;
+    transition: all ease-in-out 0.5s;
+    filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.815));
+    transform: scale(1.1) translateY(-2px) translateX(-2px);
+}
+
+.icono-gmail {
+    color: var(--principal-violeta);
+}
+
+.icono-gmail:hover {
+    fill: var(--fondo-claro);
+
 }
 
 .icono-github {
-    color: #fff;
+    color: var(--principal-violeta);
 }
 
 .icono-github:hover {
-    fill: var(--principal-violeta);
+    fill: var(--fondo-claro);
 
 }
 
+
+
 .icono-linkedin {
-    color: #fff;
+    color: var(--principal-violeta);
 }
 
 .icono-linkedin:hover {
-    fill: var(--principal-violeta);
+    fill: var(--fondo-claro);
 
 }
 
@@ -221,7 +239,7 @@ h3 {
 
 .tooltip-text {
     visibility: hidden;
-    background-color: #181818;
+    background-color: #3d449b;
     color: #fff;
 
 
@@ -230,12 +248,6 @@ h3 {
     border-radius: 4px;
     position: absolute;
 
-    left: -20%;
-    transform: translateX(-100%);
-
-
-
-
     white-space: nowrap;
     font-size: 0.8rem;
     opacity: 0;
@@ -243,9 +255,18 @@ h3 {
     z-index: 10;
 }
 
+.encabezado__redes__tooltip-text {
+    left: calc(-20%);
+    bottom:  1px;
+    transform: translateX(-110%);
+}
+
+
+
 .tooltip:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+    transition: all 0.5s ease-in-out 0.3s;
 }
 
 .contenido-principal {
@@ -614,20 +635,41 @@ h3 {
 
 .contacto h2 {
     text-align: center;
+
+
+
     color: #958ac9;
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .contacto p {
     margin-top: 10px;
     color: azure;
+    text-align: center;
+}
+
+.contacto__enlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 40px;
 }
 
 .contacto__enlace {
     color: #0984e3;
     text-decoration: none;
     margin-right: 15px;
+}
+
+
+.contacto__enlaces__tooltip-text {
+    left: calc(50% - 1px);
+    bottom: -130%;
+    transform: translateX(-50%);
+
 }
 
 @media (min-width: 900px) {
@@ -670,6 +712,14 @@ h3 {
 
     }
 
+    .encabezado__redes__tooltip-text {
+
+        bottom: 130%;
+        left: calc(50% - 3px);
+        transform: translateX(-50%);
+
+    }
+
     .icono {
 
         width: 5vh;
@@ -677,13 +727,7 @@ h3 {
 
     }
 
-    .tooltip-text {
 
-        bottom: 40px;
-        left: 50%;
-        transform: translateX(-50%);
-
-    }
 
     .seccion {
 
