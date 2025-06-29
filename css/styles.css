@@ -672,6 +672,17 @@ h3 {
 
 }
 
+
+.pie-pagina {
+    background-color: #111112;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
 @media (min-width: 900px) {
 
     h2 {
