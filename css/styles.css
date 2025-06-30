@@ -257,7 +257,7 @@ h3 {
 
 .encabezado__redes__tooltip-text {
     left: calc(-20%);
-    bottom:  1px;
+    bottom: 1px;
     transform: translateX(-110%);
 }
 
@@ -622,6 +622,18 @@ h3 {
 .sobre-mi h2 {
 
     margin-bottom: 2rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .contacto {
