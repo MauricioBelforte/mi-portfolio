@@ -79,12 +79,12 @@ h3 {
     left: 0;
     top: 0;
 
-    bottom: 1vh;
-    margin: 1vw;
+    /* bottom: 1vh; */
+    margin: 0.5vw;
 
 
-    width: 5.5vw;
-    height: 5.5vw;
+    width: 60px;
+    height: 60px;
     /* border-style: solid;
     border-radius: 20%; */
     overflow: hidden;
@@ -163,7 +163,7 @@ h3 {
 .encabezado__redes {
 
     position: absolute;
-    top: 1vh;
+    top: 1vw;
     right: 1vw;
     display: flex;
     flex-direction: column;
@@ -186,13 +186,18 @@ h3 {
 
 .icono {
     display: inline-block;
-    width: 4vw;
-    height: 4vw;
+    width: 25px;
+    height: 25px;
     fill: currentColor;
     vertical-align: middle;
     transition: fill ease-in-out 0.2s;
     cursor: pointer;
     filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.815));
+}
+
+.icono-xl {
+    width: 35px;
+    height: 35px;
 }
 
 .icono:hover {
@@ -257,7 +262,7 @@ h3 {
 
 .encabezado__redes__tooltip-text {
     left: calc(-20%);
-    bottom: 1px;
+    bottom: -1px;
     transform: translateX(-110%);
 }
 
