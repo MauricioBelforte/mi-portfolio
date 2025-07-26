@@ -14,6 +14,6 @@ document.getElementById("copiarEmail").addEventListener("click", copiarEmail);
 // Activar ScrollReveal para elementos con la clase "fade-in"
 // Esto hará que los elementos con esa clase aparezcan con un efecto de desvanecimiento al hacer scroll
 document.addEventListener("DOMContentLoaded", () => {
-    // Le paso la clase .fade-in como parámetro 
+  // Le paso la clase .fade-in como parámetro 
   activarScrollReveal(".fade-in");
 });
