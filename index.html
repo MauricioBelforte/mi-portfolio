@@ -15,11 +15,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-
-
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./chatbot/chatbot.css" />
 
 
 
@@ -63,11 +61,11 @@
                 <!--  <p>LinkedIn</p> -->
                 <svg xmlns="http://www.w3.org/2000/svg" class="icono icono-linkedin" fill="currentColor"
                     class="bi bi-linkedin" viewBox="0 0 16 16">
-                    <path   
+                    <path
                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                 </svg>
                 <span class="tooltip-text encabezado__redes__tooltip-text">LinkedIn</span>
-            </a>    
+            </a>
         </div>
     </header>
 
@@ -90,7 +88,8 @@
                 <div class="fade-in proyectos">
                     <article class="fade-in proyectos__tarjeta">
                         <figure class="proyectos__figure">
-                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Toscanes.png" alt="Captura Web de Toscanes">
+                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Toscanes.png"
+                                alt="Captura Web de Toscanes">
                         </figure>
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">Toscanes</h3>
@@ -133,7 +132,8 @@
 
                     <article class="fade-in proyectos__tarjeta">
                         <figure class="proyectos__figure">
-                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Ecommerce.png" alt="Captura Web de TREX">
+                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Ecommerce.png"
+                                alt="Captura Web de TREX">
                         </figure>
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">TREX E-commerce</h3>
@@ -186,7 +186,8 @@
 
                     <article class="fade-in proyectos__tarjeta">
                         <figure class="proyectos__figure">
-                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Cards.png" alt="Captura de Proyecto 2">
+                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Cards.png"
+                                alt="Captura de Proyecto 2">
                         </figure>
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">Web Personal</h3>
@@ -287,7 +288,21 @@
             </div>
 
         </section>
+    </main>
 
+    <button class="chat-icon" id="chat-icon" aria-label="Abrir chatbot"> <img src="./chatbot/robot.png"
+            alt="Icono de robot" /></button>
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-container__listado-de-mensajes" id="mensajes"></div>
+        <div class="chat-container__input-area">
+            <input class="chat-container__input" type="text" id="mensaje" placeholder="Escribí tu pregunta..." />
+            <button class="chat-container__button" id="enviar-mensaje">Enviar</button>
+        </div>
+    </div>
+
+    <script type="module" src="./portfolio/portfolio.js"></script>
+    <script type="module" src="./chatbot/chatbotVisual.js"></script>
 </body>
 
 <footer class="pie-pagina">
@@ -297,7 +312,6 @@
 
 
 
-<script type="module" src="./portfolio/portfolio.js"></script>
 
 
 

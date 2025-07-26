@@ -17,3 +17,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Le paso la clase .fade-in como parámetro 
   activarScrollReveal(".fade-in");
 });
+
+
+// Activa el chatbot presionando el botón 
+document.getElementById("abrirChat").addEventListener("click", async () => {
+  const module = await import("./chatbot/chatbotVisual.js");
+  module.initChatbot(); // suponiendo que tu JS exporta una función llamada initChatbot
+});
+
+
