@@ -349,7 +349,7 @@ h3 {
     background-color: #c7c2dc00;
 
     left: 0;
-    bottom: -1vh;
+    bottom: -8vh;
     z-index: -1;
     animation: slideInY 4s forwards;
 }
@@ -492,6 +492,7 @@ h3 {
     /* Asegura que esté centrada verticalmente */
     padding: 1rem;
     /* Añade un poco de espacio para que no se vea pegada a los bordes */
+    background-color: #ccc8df;
 }
 
 .proyectos__contenido {

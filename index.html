@@ -35,7 +35,7 @@
 
             <h1 class="encabezado__titulo">Mauricio Belforte</h1>
 
-            <p class="encabezado__subtitulo">Desarrollador Web Frontend </p>
+            <p class="encabezado__subtitulo">Desarrollador Web Full-Stack</p>
 
             <nav class="barra-navegacion">
                 <a class="barra-navegacion__enlace" href="#proyectos">Proyectos</a>
@@ -73,9 +73,16 @@
         <section class="bienvenida ">
             <div class="bienvenida__texto">
                 <h2>Bienvenido a mi portfolio</h2>
-                <p>Hola, soy Mauricio Belforte, me dedico al desarrollo web aplicando las ultimas tendencias del diseño
-                    responsivo, adaptable a distintos dispositivos y pantallas. </p>
-                <p>La mayoria de mis trabajos estan desarrollados con HTML, CCS moderno y Javascript. </p>
+                <p>Hola, soy <strong>Mauricio Belforte</strong> , me dedico al <strong>Desarrollo Web
+                        Full-Stack</strong>. Puedo
+                    construir soluciones digitales robustas y escalables, desde interfaces de usuario interactivas,
+                    hasta
+                    arquitecturas de backend complejas.</p>
+                <p>Debajo podes ver alguno de mis proyectos que demuestran mi experiencia con <strong>HTML, CSS y
+                        JavaScript</strong>, la creación de backends con <strong>Node.js</strong>, la integración de
+                    <strong>APIs de Inteligencia Artificial</strong> y el despliegue en plataformas como <strong>Vercel
+                        y GitHub Pages</strong>.
+                </p>
             </div>
             <div class="bienvenida__imagen">
                 <img src="./assets/imagenes/bienvenida.svg" alt="Bienvenida">
@@ -94,10 +101,15 @@
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">Asistente Virtual con IA</h3>
                             <div class="proyectos__descripcion">
-                                <p>Chatbot integrado en este portfolio para responder tus dudas.</p>
-                                <p>El backend fue construido con <strong>Node.js y Express</strong>, y se conecta a una
-                                    API de IA para procesar el lenguaje. ¡Una demostración de mis habilidades
-                                    full-stack!</p>
+                                <p><strong>Ecosistema de Chatbot IA Modular</strong> diseñado para una integración
+                                    flexible y reutilizable en cualquier web.</p>
+                                <p>Su núcleo es un <strong>motor de IA serverless</strong> (Node.js en Vercel)
+                                    compatible con múltiples proveedores y modelos como <strong>Gemini, DeepSeek y
+                                        Mistral</strong>, con lógica de fallback automático.</p>
+                                <p>Este portfolio (en <strong>GitHub Pages</strong>) consume la API del motor vía
+                                    <strong>`fetch()`</strong>, demostrando una arquitectura <strong>full-stack</strong>
+                                    desacoplada y resiliente.
+                                </p>
                                 <p><strong>Pruébalo haciendo clic en el ícono <img class="inline-icon"
                                             src="./assets/imagenes/robot.png" alt="logo del portfolio"> en la esquina
                                         inferior derecha.</strong></p>
@@ -118,9 +130,12 @@
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">Toscanes</h3>
                             <div class="proyectos__descripcion">
-                                <p>Landing page desarrollada para el grupo Toscanes, dedicado a inversiones inmobiliarias.
-                                </p>
-                                <p>El proyecto fue desplegado en un hosting profesional <strong>(Hostinger)</strong> y se gestionó la delegación de un dominio personalizado <strong>(.com.ar)</strong>, demostrando experiencia en el ciclo completo de vida de una aplicación web.</p>
+                                <p>Landing page desarrollada para el grupo Toscanes, dedicado a inversiones
+                                    inmobiliarias.
+                                <p>El proyecto fue desplegado en un <strong>hosting profesional (Hostinger)</strong> y
+                                    se gestionó la <strong>delegación de un dominio personalizado (.com.ar)</strong>,
+                                    demostrando experiencia en el <strong>ciclo completo de vida de una aplicación
+                                        web</strong>.</p>
                             </div>
                             <div class="proyectos__enlaces">
                                 <a class="proyectos__enlace" href="https://toscanes.com.ar/" target="_blank">Ir a la
@@ -139,8 +154,12 @@
                             <h3 class="proyectos__titulo">Radio Santa Barbara</h3>
                             <div class="proyectos__descripcion">
                                 <p>Web para emisora radial Santa Barbara 98.5Mhz Rio Turbio.</p>
-                                <p>Contiene una galeria con imagenes rotativas, emision de audio 24hs, animaciones.</p>
-
+                                <p>Incluye una <strong>galería con imágenes rotativas</strong>, <strong>emisión de audio
+                                        24hs</strong> y <strong>animaciones CSS</strong> para una experiencia de usuario
+                                    dinámica.</p>
+                                <p>Desplegado en <strong>Firebase Hosting</strong> para su uso real, y <strong>GitHub
+                                        Pages</strong> para esta demostración, para evitar la sobrecarga del hosting.
+                                </p>
                             </div>
                             <div class="proyectos__enlaces">
                                 <a class="proyectos__enlace"
@@ -155,17 +174,48 @@
 
                     <article class="fade-in proyectos__tarjeta">
                         <figure class="proyectos__figure">
+                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Colimbeta3.png"
+                                alt="Captura Web de Radio Santa Barbara">
+                        </figure>
+                        <div class="proyectos__contenido">
+                            <h3 class="proyectos__titulo">Colimbeta</h3>
+                            <div class="proyectos__descripcion">
+                                <p>Aplicación Web desarrollada para jugadores online de fighting game.</p>
+                                <p>Implementa una <strong>lógica de marcadores y gestión de turnos</strong>,
+                                    actualizando la interfaz en tiempo real mediante la <strong>manipulación del DOM con
+                                        JavaScript</strong>.</p>
+                                <p>Utiliza un <strong>algoritmo de cola (queue)</strong> para la rotación de jugadores:
+                                    el ganador suma un punto y sigue, el perdedor espera su próximo turno.</p>
+                                <p>Desplegado en <strong>GitHub Pages</strong>.</p>
+                            </div>
+                            <div class="proyectos__enlaces">
+                                <a class="proyectos__enlace"
+                                    href="https://mauriciobelforte.github.io/proyecto-marcador-gana-sigue/"
+                                    target="_blank">Ir a
+                                    la Web</a>
+                                <a class="proyectos__enlace"
+                                    href="https://github.com/MauricioBelforte/proyecto-marcador-gana-sigue"
+                                    target="_blank">Ver el código</a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="fade-in proyectos__tarjeta">
+                        <figure class="proyectos__figure">
                             <img class="proyectos__imagen" src="./assets/imagenes/Web-Ecommerce.png"
                                 alt="Captura Web de TREX">
                         </figure>
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">TREX E-commerce</h3>
                             <div class="proyectos__descripcion">
-                                <p>Proyecto de Web E-commerce, desarrollada para el curso Full-Stack Node.js, del
-                                    programa Codo a Codo 4.0</p>
-                                <p>Contiene un carrusel de imagenes desarrollado con Bootstrap.</p>
-                                <p>Contiene una galeria de imagenes.</p>
-
+                                <p>Proyecto de <strong>E-commerce</strong>, desarrollado para el curso
+                                    <strong>Full-Stack con Node.js</strong>, del
+                                    programa Codo a Codo 4.0
+                                </p>
+                                <p>Implementa un <strong>carrusel de imágenes con Bootstrap</strong> y una galería de
+                                    productos para una navegación intuitiva.</p>
+                                <p>Desplegado en <strong>GitHub Pages</strong>.</p>
                             </div>
                             <div class="proyectos__enlaces">
                                 <a class="proyectos__enlace"
@@ -180,32 +230,32 @@
 
                     <article class="fade-in proyectos__tarjeta">
                         <figure class="proyectos__figure">
-                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Colimbeta.png"
-                                alt="Captura Web de Radio Santa Barbara">
+                            <img class="proyectos__imagen" src="./assets/imagenes/Web-Rick-Morty.png"
+                                alt="Captura Web de la API de Rick and Morty">
                         </figure>
                         <div class="proyectos__contenido">
-                            <h3 class="proyectos__titulo">Colimbeta</h3>
+                            <h3 class="proyectos__titulo">API Rick and Morty</h3>
                             <div class="proyectos__descripcion">
-                                <p>Aplicación Web desarrollada para jugadores online de fighting game.</p>
-                                <p>El sistema consta de un marcador con jugadores y puntajes, que permite llevar un
-                                    control
-                                    del orden en que se disputan las partidas.
-                                    El ganador suma un punto, el perdedor no suma y espera a que jueguen todo el resto
-                                    de
-                                    los participantes, hasta que toque su turno nuevamente.</p>
-
+                                <p>Aplicación que consume la <strong>API de Rick and Morty</strong> utilizando la
+                                    función <strong>`fetch()`</strong> de JavaScript para realizar peticiones
+                                    asíncronas.</p>
+                                <p>Implementa la <strong>manipulación del DOM</strong> para renderizar dinámicamente los
+                                    datos y presenta la información en <strong>cards responsivas</strong>.</p>
+                                <p>Desplegado en <strong>GitHub Pages</strong>.</p>
                             </div>
                             <div class="proyectos__enlaces">
                                 <a class="proyectos__enlace"
-                                    href="https://mauriciobelforte.github.io/proyecto-marcador-gana-sigue/"
+                                    href="https://mauriciobelforte.github.io/proyecto-API-RickandMorty/"
                                     target="_blank">Ir a
                                     la Web</a>
                                 <a class="proyectos__enlace"
-                                    href="https://github.com/MauricioBelforte/proyecto-marcador-gana-sigue"
-                                    target="_blank">Ver el código</a>
+                                    href="https://github.com/MauricioBelforte/proyecto-API-RickandMorty"
+                                    target="_blank">Ver
+                                    el Código</a>
                             </div>
                         </div>
                     </article>
+
 
                     <article class="fade-in proyectos__tarjeta">
                         <figure class="proyectos__figure">
@@ -215,12 +265,15 @@
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">Web Personal</h3>
                             <div class="proyectos__descripcion">
-                                <p>Web personal para trabajar en cards responsivas.</p>
+                                <p>Web personal para practicar la <strong>maquetación responsive</strong> de cards
+                                    utilizando <strong>Flexbox</strong>.</p>
+                                <p>El proyecto fue desplegado utilizando <strong>Firebase Hosting</strong> para una
+                                    entrega continua y eficiente.</p>
                             </div>
                             <div class="proyectos__enlaces">
                                 <a class="proyectos__enlace" href="https://empleoonlinecripto.web.app/"
                                     target="_blank">Ir a la Web</a>
-                                <a class="proyectos__enlace" href="#" target="_blank">Ver el Código</a>
+                                <!--    <a class="proyectos__enlace" href="#" target="_blank">Ver el Código</a> -->
                             </div>
                         </div>
                     </article>
@@ -232,10 +285,13 @@
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">Generador de contraseñas</h3>
                             <div class="proyectos__descripcion">
-                                <p>Generador de contraseñas aleatorias, realizado con JavaScript.</p>
-                                <p>Contiene un botón para limpiar los campos.</p>
-                                <p>Valida si la contraseña es fuerte o débil.</p>
-                                <p>Contiene símbolos especiales para crear contraseñas más seguras.</p>
+                                <p><strong>Generador de contraseñas aleatorias</strong> que utiliza
+                                    <strong>JavaScript</strong> puro y <strong>manipulación del DOM</strong> para una
+                                    experiencia interactiva.
+                                </p>
+                                <p>Incluye <strong>validación de fortaleza</strong> y la opción de agregar caracteres
+                                    especiales para crear contraseñas más seguras.</p>
+                                <p>Desplegado en <strong>GitHub Pages</strong>.</p>
                             </div>
                             <div class="proyectos__enlaces">
                                 <a class="proyectos__enlace"
@@ -263,7 +319,8 @@
             <p class="fade-in">💡 Domino el desarrollo frontend con HTML, CSS y JavaScript. He expandido mis habilidades
                 al <strong>backend</strong>, construyendo aplicaciones con <strong>Node.js y Express</strong>,
                 integrando <strong>APIs de Inteligencia Artificial</strong> y manejando el control de versiones con
-                <strong>Git y GitHub</strong>.</p>
+                <strong>Git y GitHub</strong>.
+            </p>
 
             <p class="fade-in">🛠️ Apasionado por la tecnología, mi experiencia previa en hardware y software me otorga
                 una perspectiva integral para la resolución de problemas complejos y la optimización del rendimiento.
