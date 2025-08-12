@@ -208,6 +208,14 @@ h3 {
     transform: scale(1.1) translateY(-2px) translateX(-2px);
 }
 
+.inline-icon {
+    height: 2em;
+    /* Se ajusta al tamaño de la fuente del texto circundante */
+    width: auto;
+    vertical-align: bottom;
+    /* Alinea la imagen verticalmente con el texto */
+}
+
 .icono-gmail {
     color: var(--principal-violeta);
 }
@@ -474,6 +482,16 @@ h3 {
 
 
 
+}
+
+/* Modificador para imágenes que no deben ser recortadas, como la del asistente */
+.proyectos__imagen--contain {
+    object-fit: contain;
+    /* Mantiene la proporción y la ajusta dentro del contenedor */
+    object-position: center;
+    /* Asegura que esté centrada verticalmente */
+    padding: 1rem;
+    /* Añade un poco de espacio para que no se vea pegada a los bordes */
 }
 
 .proyectos__contenido {

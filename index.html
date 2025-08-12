@@ -88,16 +88,39 @@
                 <div class="fade-in proyectos">
                     <article class="fade-in proyectos__tarjeta">
                         <figure class="proyectos__figure">
+                            <img class="proyectos__imagen proyectos__imagen--contain" src="./chatbot/robot.png"
+                                alt="Asistente Virtual con IA">
+                        </figure>
+                        <div class="proyectos__contenido">
+                            <h3 class="proyectos__titulo">Asistente Virtual con IA</h3>
+                            <div class="proyectos__descripcion">
+                                <p>Chatbot integrado en este portfolio para responder tus dudas.</p>
+                                <p>El backend fue construido con <strong>Node.js y Express</strong>, y se conecta a una
+                                    API de IA para procesar el lenguaje. ¡Una demostración de mis habilidades
+                                    full-stack!</p>
+                                <p><strong>Pruébalo haciendo clic en el ícono <img class="inline-icon"
+                                            src="./assets/imagenes/robot.png" alt="logo del portfolio"> en la esquina
+                                        inferior derecha.</strong></p>
+                            </div>
+                            <div class="proyectos__enlaces">
+                                <a class="proyectos__enlace"
+                                    href="https://github.com/MauricioBelforte/chatbot-ecosystem" target="_blank">Ver el
+                                    código</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="fade-in proyectos__tarjeta">
+                        <figure class="proyectos__figure">
                             <img class="proyectos__imagen" src="./assets/imagenes/Web-Toscanes.png"
                                 alt="Captura Web de Toscanes">
                         </figure>
                         <div class="proyectos__contenido">
                             <h3 class="proyectos__titulo">Toscanes</h3>
                             <div class="proyectos__descripcion">
-                                <p>Landing page desarrollada para el grupo Toscanes, dedicado
-                                    a inversiones inmobiliarias.</p>
-                                <p>Contiene menu desplegable con transiciones.</p>
-
+                                <p>Landing page desarrollada para el grupo Toscanes, dedicado a inversiones inmobiliarias.
+                                </p>
+                                <p>El proyecto fue desplegado en un hosting profesional <strong>(Hostinger)</strong> y se gestionó la delegación de un dominio personalizado <strong>(.com.ar)</strong>, demostrando experiencia en el ciclo completo de vida de una aplicación web.</p>
                             </div>
                             <div class="proyectos__enlaces">
                                 <a class="proyectos__enlace" href="https://toscanes.com.ar/" target="_blank">Ir a la
@@ -233,16 +256,18 @@
         <section id="sobre-mi" class="seccion sobre-mi">
             <h2 class="fade-in">Sobre mí</h2>
 
-            <p class="fade-in">👨‍💻 Soy un desarrollador web que se enfoca en los detalles y la experiencia de usuario.
+            <p class="fade-in">👨‍💻 Soy un desarrollador web <strong>Full-Stack</strong> que se enfoca en crear
+                soluciones completas, desde la interfaz de usuario hasta la lógica del servidor.
             </p>
 
-            <p class="fade-in">💡 He trabajado con tecnologías como HTML, CSS, JavaScript, Bootstrap, React, Node.js,
-                bases de datos SQL y
-                NoSQL. Pero siempre buscando aprender y mejorar mis habilidades tanto técnicas como blandas.</p>
+            <p class="fade-in">💡 Domino el desarrollo frontend con HTML, CSS y JavaScript. He expandido mis habilidades
+                al <strong>backend</strong>, construyendo aplicaciones con <strong>Node.js y Express</strong>,
+                integrando <strong>APIs de Inteligencia Artificial</strong> y manejando el control de versiones con
+                <strong>Git y GitHub</strong>.</p>
 
-            <p class="fade-in">🛠️ Apasionado por la tecnología, me dediqué mucho tiempo a la reparación de equipos
-                informáticos, lo que me
-                permitió adquirir un amplio conocimiento en hardware y software.</p>
+            <p class="fade-in">🛠️ Apasionado por la tecnología, mi experiencia previa en hardware y software me otorga
+                una perspectiva integral para la resolución de problemas complejos y la optimización del rendimiento.
+            </p>
 
             <p class="fade-in">🎓 Actualmente me encuentro estudiando la carrera de Analista Programador, y he trabajado
                 en varios
@@ -290,8 +315,8 @@
         </section>
     </main>
 
-    <button class="chat-icon" id="chat-icon" aria-label="Abrir chatbot"> <img src="./chatbot/robot.png"
-            alt="Icono de robot" /></button>
+    <button class="chat-icon" id="chat-icon" aria-label="Abrir chatbot"> <img src="./assets/imagenes/robot.png"
+            alt="Abrir asistente virtual" /></button>
 
     <div class="chat-container" id="chat-container">
         <div class="chat-container__listado-de-mensajes" id="mensajes"></div>
