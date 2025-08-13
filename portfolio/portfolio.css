@@ -1,5 +1,5 @@
 :root {
-    --secundario-violeta-oscuro: #070439;
+    /* === Colores === */
     --principal-violeta: #aaaadc;
     --terceario-azul: #2e3382;
     --moderate-cyan: hsl(170, 45%, 43%);
@@ -7,12 +7,42 @@
     --light-gray: #bfbfbf;
     --fondo-claro: #f6f6fe;
 
+    /* === Espaciados === */
     --padding-container: 90px 0;
 
+    /* === Fuentes === */
     --font1: "DM Sans", sans-serif;
     --font2: 'Raleway', sans-serif;
 
+    /* === Tamaños de fuente === */
+    /* Base */
+    --font-size-body: 0.8rem;
+    --font-size-h2: 2rem;
+    --font-size-encabezado-titulo: 1.5rem;
+    --font-size-encabezado-subtitulo: 0.8rem;
+    --font-size-nav-enlace: 0.9rem;
+    --font-size-tooltip: 0.6rem;
+    --font-size-bienvenida-p: 1.2rem;
+    --font-size-proyecto-titulo: 1.2rem;
+    --font-size-proyecto-descripcion: 0.8rem;
+    --font-size-proyecto-enlace: 0.8rem;
+    --font-size-sobre-mi-base: 1.2rem;
+    --font-size-sobre-mi-p: 1.2rem;
+    --font-size-contacto-h2: 1.8rem;
 
+    /* Responsive (min-width: 900px) */
+    --font-size-h2-900px: 2.4rem;
+    --font-size-encabezado-titulo-900px: 2.3rem;
+    --font-size-encabezado-subtitulo-900px: 1.0rem;
+    --font-size-bienvenida-p-900px: 1.4rem;
+    --font-size-proyecto-descripcion-900px: 0.8rem;
+    --font-size-proyecto-enlace-900px: 0.7rem;
+    --font-size-sobre-mi-p-900px: 1.4rem;
+
+    /* Responsive (min-width: 1200px) */
+    --font-size-bienvenida-p-1200px: 1.4rem;
+    --font-size-proyecto-titulo-1200px: 1.5rem;
+    --font-size-proyecto-enlace-1200px: 0.7rem;
 }
 
 
@@ -28,8 +58,8 @@ a {
 
 body {
     font-family: var(--font2);
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: var(--font-size-body);
+    line-height: 1.4;
     letter-spacing: 0.5px;
     word-spacing: 4px;
 
@@ -44,8 +74,8 @@ body {
 h2 {
     text-align: center;
     font-family: var(--font2);
-    font-size: 2rem;
-    color: #2e3382;
+    font-size: var(--font-size-h2);
+    color: var(--terceario-azul);
     margin-bottom: 20px;
 }
 
@@ -119,13 +149,13 @@ h3 {
 
 .encabezado__titulo {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: var(--font-size-encabezado-titulo);
     letter-spacing: 1px;
 }
 
 .encabezado__subtitulo {
     margin: 8px 0 0 0;
-    font-size: 1rem;
+    font-size: var(--font-size-encabezado-subtitulo);
     color: #b2bec3;
 }
 
@@ -146,7 +176,7 @@ h3 {
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
-    font-size: 1rem;
+    font-size: var(--font-size-nav-enlace);
     padding: 10px;
     border-radius: 10px;
     transition: all ease-in-out 0.2s;
@@ -263,7 +293,7 @@ h3 {
     position: absolute;
 
     white-space: nowrap;
-    font-size: 0.8rem;
+    font-size: var(--font-size-tooltip);
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
     z-index: 10;
@@ -309,7 +339,7 @@ h3 {
     padding: 5vh 10vw 0vh 10vw;
     margin: 0 auto;
     max-width: 100%;
-    font-size: 1.2rem;
+    font-size: var(--font-size-bienvenida-p);
     position: relative;
     background-color: #c7c2dce8;
     animation: slideInY 1s forwards;
@@ -349,7 +379,7 @@ h3 {
     background-color: #c7c2dc00;
 
     left: 0;
-    bottom: -8vh;
+    bottom: -6vh;
     z-index: -1;
     animation: slideInY 4s forwards;
 }
@@ -394,8 +424,14 @@ h3 {
 
 
 .container {
-    padding: 5vh 10vw 10vh 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+    padding: 5vh 8vw 10vh 8vw;
     /* animation: slideInY 4s forwards; */
+    margin: 0 auto;
+
 }
 
 
@@ -427,18 +463,14 @@ h3 {
     border-radius: 40px;
     /*  padding: 1rem; */
     border-style: solid;
-    border-width: 1.5vw;
-    border-color: #e6e5eb;
+    border-width: 25px;
+    border-color: #2a292f;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     justify-content: space-between;
     align-content: space-between;
     transition: all ease-in-out 0.5s;
+    max-width: 600px;
 
-
-    /* font-size: 1rem;
-    line-height: 1.4rem;
-    letter-spacing: 0.01rem;
-    word-spacing: 0.2rem; */
     overflow: hidden;
 
 
@@ -447,7 +479,7 @@ h3 {
 .proyectos__tarjeta:hover {
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.334);
-    border-color: #aca7c7;
+    /*   border-color: #aca7c7; */
 
     transition: all ease-in-out 0.5s;
 }
@@ -464,7 +496,7 @@ h3 {
     justify-content: top; */
     overflow: hidden;
 
-    /*  max-height: 30vh; */
+    max-height: 30vh;
 
 
 
@@ -478,6 +510,7 @@ h3 {
     object-fit: cover;
     display: block;
     margin-bottom: 10px;
+    object-position: top;
 
 
 
@@ -549,20 +582,20 @@ h3 {
 .proyectos__titulo {
     margin-top: 2vh;
     margin-bottom: 0.5vw;
-    color: #2e3382;
-    font-size: 1.6rem;
+    color: var(--terceario-azul);
+    font-size: var(--font-size-proyecto-titulo);
     position: relative;
 }
 
 .proyectos__descripcion {
     font-family: var(--font1);
     color: #4f4c6c;
-    font-size: 1rem;
+    font-size: var(--font-size-proyecto-descripcion);
     font-weight: 400;
     font-style: normal;
     letter-spacing: .01rem;
     word-spacing: 0.01rem;
-    line-height: 1.2rem;
+    line-height: 1rem;
     /* padding-bottom: 20px; */
     margin: 2px;
 
@@ -585,7 +618,8 @@ h3 {
     justify-content: center;
     align-items: end;
     gap: 4vw;
-    margin: 3vw 2vw;
+    margin: 1vw 2vw 2vw 2vw;
+    flex-wrap: wrap;
     /*Le puse flex-grow:1 para que se lleve el espacio que conseguimos cuando usamos flex-grow:1 a su padre que era el contenido*/
     flex-grow: 1;
     flex-basis: 0;
@@ -595,7 +629,7 @@ h3 {
 .proyectos__enlace {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: var(--font-size-proyecto-enlace);
     padding: 5px 10px;
     font-family: var(--font1);
     font-weight: 600;
@@ -645,13 +679,13 @@ h3 {
     padding: 10vh 10vw 15vh 10vw;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 
-    font-size: 1.4rem;
+    font-size: var(--font-size-sobre-mi-base);
     z-index: 10;
 }
 
 .sobre-mi p {
     margin: 1rem 0rem;
-    font-size: 1.2rem;
+    font-size: var(--font-size-sobre-mi-p);
     letter-spacing: 0.01rem;
 }
 
@@ -676,7 +710,7 @@ h3 {
 
 
     color: #958ac9;
-    font-size: 1.8rem;
+    font-size: var(--font-size-contacto-h2);
     margin-bottom: 30px;
 }
 
@@ -684,6 +718,7 @@ h3 {
     margin-top: 10px;
     color: azure;
     text-align: center;
+    font-size: 1rem;
 }
 
 .contacto__enlaces {
@@ -724,8 +759,7 @@ h3 {
 
     h2 {
 
-        font-size: 2.4rem;
-
+        font-size: var(--font-size-h2-900px);
     }
 
     .encabezado__nav {
@@ -739,11 +773,11 @@ h3 {
     }
 
     .encabezado__titulo {
-        font-size: 2.5rem;
+        font-size: var(--font-size-encabezado-titulo-900px);
     }
 
     .encabezado__subtitulo {
-        font-size: 1.2rem;
+        font-size: var(--font-size-encabezado-subtitulo-900px);
     }
 
     .encabezado__redes {
@@ -786,41 +820,9 @@ h3 {
         gap: 30px;
     }
 
-    .bienvenida {
-        flex-direction: row;
-        padding: 3% 3vw 1vw 8vw;
-        text-align: left;
-        font-size: 1.4rem;
-
-        justify-content: center;
-
-
+    .bienvenida p {
+        font-size: var(--font-size-bienvenida-p-900px);
     }
-
-    .bienvenida__texto {
-        flex-grow: 1;
-        padding-right: 5vw;
-        padding-bottom: 10vw;
-
-    }
-
-    .bienvenida__imagen {
-        position: relative;
-        flex-grow: 1;
-        overflow: visible;
-        max-width: 30vw;
-        padding-top: 0;
-
-    }
-
-    .bienvenida__imagen img {
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
-        width: 32vw;
-    }
-
 
     .bienvenida::before {
         background-image: url('../assets/imagenes/bg-curve-desktop.svg');
@@ -828,12 +830,12 @@ h3 {
     }
 
     .bienvenida h2 {
-        text-align: left;
+        text-align: center;
     }
 
     .container {
-        /* padding: 0 1vw; */
-
+        padding: 5vh 5vw 10vh 5vw;
+        /* animation: slideInY 4s forwards; */
     }
 
     .proyectos {
@@ -843,7 +845,7 @@ h3 {
 
     .proyectos__tarjeta {
         /* font-size: 1.1vw; */
-        border-width: 0.7vw;
+        border-width: 25px;
     }
 
     .proyectos__figure {
@@ -876,10 +878,10 @@ h3 {
 
     .proyectos__descripcion {
         color: #4f4c6c;
-        font-size: 0.9rem;
+        font-size: var(--font-size-proyecto-descripcion-900px);
         font-weight: 400;
         letter-spacing: .01rem;
-        line-height: 1.1rem;
+        /* line-height: 1.1rem; */
         word-spacing: 0.01rem;
         /* margin: 2px; */
     }
@@ -891,28 +893,103 @@ h3 {
     }
 
     .proyectos__enlace {
-        font-size: 0.8rem;
+        font-size: var(--font-size-proyecto-enlace-900px);
         max-width: 17vw;
 
     }
 
     .sobre-mi p {
         margin: 1rem 0rem;
-        font-size: 1.4rem;
+        font-size: var(--font-size-sobre-mi-p-900px);
         letter-spacing: 0.01rem;
     }
 }
 
 @media (min-width: 1200px) {
 
-    /*    .container {
-        padding: 0 6vw;
+    .container {
+        padding: 5vh 12vw 10vh 12vw;
+        /* animation: slideInY 4s forwards; */
+    }
 
-    } */
+
+
+
+    .bienvenida {
+        flex-direction: row;
+        padding: 3% 3vw 1vw 8vw;
+        text-align: left;
+        font-size: var(--font-size-bienvenida-p-1200px);
+        /* gap: 20px; */
+        justify-content: center;
+
+
+    }
+
+    .bienvenida h2 {
+        text-align: left;
+    }
+
+    .bienvenida__texto {
+        flex-grow: 5;
+        padding-right: 1vw;
+        padding-bottom: 10vw;
+
+    }
+
+    .bienvenida__imagen {
+        position: relative;
+        flex-grow: 1;
+        overflow: visible;
+        max-width: 30vw;
+        padding-top: 0;
+
+    }
+
+    .bienvenida__imagen img {
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        /* width: 32vw; */
+    }
 
     .proyectos {
-        /* grid-template-columns: repeat(3, 1fr); */
-        gap: 5vw;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6vw;
+    }
+
+    .proyectos__tarjeta {
+        /* font-size: 1.1vw; */
+        border-width: 25px;
+    }
+
+    .proyectos__figure {
+        height: 15vw;
+
+        max-height: 30vw;
+    }
+
+    .proyectos__imagen {
+        width: 100%;
+
+        /* object-fit: cover; */
+        /* height: auto; */
+        margin-bottom: 10px;
+        object-position: top;
+
+
+
+    }
+
+    .proyectos__contenido {
+        padding: 0.5vw 2vw 0.5vw 2vw;
+    }
+
+    .proyectos__titulo {
+        /* font-size: 2rem; */
+        margin-top: 1vw;
+        margin-bottom: 0.5vw;
     }
 
     .proyectos__contenido {
@@ -920,7 +997,7 @@ h3 {
     }
 
     .proyectos__titulo {
-        font-size: 2rem;
+        font-size: var(--font-size-proyecto-titulo-1200px);
         margin-top: 0.5vw;
         margin-bottom: 0.25vw;
     }
@@ -928,12 +1005,12 @@ h3 {
 
     .proyectos__enlaces {
 
-        gap: 3vw;
+        gap: 2vw;
 
     }
 
     .proyectos__enlace {
-        font-size: 0.9rem;
+        font-size: var(--font-size-proyecto-enlace-1200px);
 
     }
 
