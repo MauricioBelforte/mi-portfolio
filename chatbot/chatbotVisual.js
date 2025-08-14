@@ -65,7 +65,7 @@ async function enviarMensaje() {
 
   try {
     // Peticion a mi api server.js
-    const res = await fetch("https://chatbot-backend-vercel.vercel.app/api/chatbotApi", {
+    const res = await fetch("https://chatbot-backend-vercel.vercel.app/api/motor-ia", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
