@@ -427,7 +427,8 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
+    ;
     padding: 5vh 8vw 10vh 8vw;
     /* animation: slideInY 4s forwards; */
     margin: 0 auto;
@@ -459,12 +460,13 @@ h3 {
 .proyectos__tarjeta {
     display: flex;
     flex-direction: column;
-    background: #fff;
+    background: #2a292f;
     border-radius: 40px;
     /*  padding: 1rem; */
-    border-style: solid;
+    /* border-style: solid;
     border-width: 25px;
-    border-color: #2a292f;
+    border-color: #2a292f; */
+    padding: 40px 30px 40px 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
     justify-content: space-between;
     align-content: space-between;
@@ -476,8 +478,53 @@ h3 {
 
 }
 
+.proyectos__tarjeta-bisel {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);    
+    width: 80%; /* Aumentamos el ancho para dar espacio a los elementos */
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    /* Para que esté por encima de la imagen */
+}
+
+.proyectos__tarjeta-camara {
+    position: absolute;
+    left: 10px;
+    width: 8px;
+    height: 8px;
+    background-color: #111;
+    border-radius: 50%;
+    border: 1px solid #4a4853;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.proyectos__tarjeta-camara-lente {
+    width: 3px;
+    height: 3px;
+    background-color: #3e3c52;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 0px #5c5aff;
+}
+
+.proyectos__tarjeta-parlante {
+    width: 40px;
+    height: 4px;
+    background-color: #3a3941;
+    border-radius: 20px;
+}
+
+
+
+
 .proyectos__tarjeta:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.334);
     /*   border-color: #aca7c7; */
 
@@ -512,7 +559,8 @@ h3 {
     margin-bottom: 10px;
     object-position: top;
 
-
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 
 
 }
@@ -533,8 +581,8 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 1vw;
-    padding: 0.5vw 2.5vw 2vw 2.5vw;
+    /*  margin-top: 1vw; */
+    padding: 1.5vw 2.5vw 2vw 2.5vw;
     text-align: center;
     /*Use el flex-grow:1 para poder poner los botones al final
     Yo lo entiendo asi, habia espacio disponible en el .proyectos__tarjeta al poner flex-grow:1 se lo llevo el contenido,
@@ -542,9 +590,11 @@ h3 {
     flex-grow: 1;
     flex-basis: 0;
 
-
+    background-color: #ffffff;
     opacity: 1;
     position: relative;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /*El hover en el ancestro que era la card, creo un pseudoelemento en el nieto! Espectacular*/
@@ -867,7 +917,7 @@ h3 {
     }
 
     .proyectos__contenido {
-        padding: 0.5vw 2vw 0.5vw 2vw;
+        padding: 1.5vw 2vw 0.5vw 2vw;
     }
 
     .proyectos__titulo {
@@ -983,7 +1033,7 @@ h3 {
     }
 
     .proyectos__contenido {
-        padding: 0.5vw 2vw 0.5vw 2vw;
+        padding: 1.5vw 2vw 0.5vw 2vw;
     }
 
     .proyectos__titulo {
