@@ -482,8 +482,9 @@ h3 {
     position: absolute;
     top: 12px;
     left: 50%;
-    transform: translateX(-50%);    
-    width: 80%; /* Aumentamos el ancho para dar espacio a los elementos */
+    transform: translateX(-50%);
+    width: 80%;
+    /* Aumentamos el ancho para dar espacio a los elementos */
     height: 15px;
     display: flex;
     align-items: center;
@@ -567,13 +568,19 @@ h3 {
 
 /* Modificador para imágenes que no deben ser recortadas, como la del asistente */
 .proyectos__imagen--contain {
-    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     /* Mantiene la proporción y la ajusta dentro del contenedor */
     object-position: center;
-    /* Asegura que esté centrada verticalmente */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    /*     
     padding: 1rem;
-    /* Añade un poco de espacio para que no se vea pegada a los bordes */
-    background-color: #ccc8df;
+    
+
+    background-color: #ccc8df; */
 }
 
 .proyectos__contenido {
