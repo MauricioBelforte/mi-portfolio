@@ -42,6 +42,26 @@ Una vez que la estructura es semántica, la jerarquía del contenido debe ser l�
 -   **Orden lógico:** La estructura debe ser como el índice de un libro. No saltes niveles (por ejemplo, de un `<h1>` a un `<h3>`). Lo correcto es `<h1>` -> `<h2>` -> `<h3>`.
 -   **Palabras clave:** Usa tus palabras clave de forma natural en los encabezados, especialmente en el `<h1>` y los `<h2>`.
 
+**Ejemplo de tu Portfolio (Correcto):**
+
+Tu portfolio sigue esta regla a la perfección. La estructura es clara y lógica:
+
+```html
+<!-- Título principal de la página (Nivel 1) -->
+<h1>Mauricio Belforte</h1>
+
+<!-- Título de una sección principal (Nivel 2) -->
+<section id="proyectos">
+  <h2>Proyectos destacados</h2>
+
+  <!-- Título de un elemento dentro de la sección (Nivel 3) -->
+  <article class="proyectos__tarjeta">
+    <h3>Asistente Virtual con IA</h3>
+    ...
+  </article>
+</section>
+```
+
 ### Caso Especial: Cuando el `<h1>` es una Imagen (Técnica Visually Hidden)
 
 **El Problema:** A veces el diseño requiere que el título principal sea un logotipo o una imagen compleja (SVG), pero Google necesita texto real en una etiqueta `<h1>` para entender de qué trata la página.
@@ -61,22 +81,28 @@ Una vez que la estructura es semántica, la jerarquía del contenido debe ser l�
 
 ## 3. Meta Etiquetas Esenciales: El ADN de tu página
 
-Antes de dar órdenes a los robots, debemos definir la identidad de nuestra página. Estas etiquetas van en el `<head>` y son la primera impresión que Google y los usuarios tienen de tu sitio.
+Estas etiquetas van en el `<head>` y son la primera impresión que Google y los usuarios tienen de tu sitio. Definen el título, la descripción y las palabras clave.
 
-*   **Title:** `<title>Título de la Página</title>`
-    *   Es el texto que aparece en la pestaña del navegador y el título principal (en azul) en los resultados de Google. Es el factor SEO más importante en la página. Debe ser descriptivo y único.
+**Ejemplo de tu Portfolio (Optimizado):**
 
-*   **Description:** `<meta name="description" content="...">`
-    *   Es el resumen (aprox. 160 caracteres) que aparece en los resultados de Google bajo el título. No afecta directamente el ranking, pero es vital para convencer al usuario de hacer clic.
+```html
+<!-- Título que aparece en la pestaña y en los resultados de Google. ¡El más importante! -->
+<title>Mauricio Belforte | Desarrollador Web Full-Stack</title>
 
-*   **Keywords:** `<meta name="keywords" content="...">`
-    *   Lista de palabras clave separadas por comas. Aunque Google le da menos importancia que antes, sigue siendo útil para organizar los temas de la página.
+<!-- Descripción (máx. 160 caracteres) que se muestra en Google. Convence al usuario de hacer clic. -->
+<meta name="description"
+    content="Portfolio de Mauricio Belforte, desarrollador web Full-Stack. Explora mis proyectos con Node.js, JavaScript, IA y más.">
 
-*   **Author:** `<meta name="author" content="...">`
-    *   Indica quién creó la página (persona o empresa). Aporta transparencia.
+<!-- Palabras clave relevantes para tu contenido. -->
+<meta name="keywords"
+    content="portfolio, desarrollador web, full-stack, frontend, backend, node.js, ia, javascript, Mauricio Belforte">
 
-*   **Viewport:** `<meta name="viewport" content="width=device-width, initial-scale=1">`
-    *   Indispensable para que el sitio sea "Responsive" y se adapte correctamente a dispositivos móviles.
+<!-- Autor de la página. -->
+<meta name="author" content="Mauricio Belforte">
+
+<!-- Indispensable para que el sitio sea "Responsive" y se adapte a móviles. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
 
 ---
 
