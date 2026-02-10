@@ -114,13 +114,13 @@ Ahora que la página tiene su identidad, le diremos a los "robots" (o arañas) d
 **Ubicación:** En la raíz del sitio (ej: `tusitio.com/robots.txt`).
 **Función:** Da órdenes generales a los robots. Decide quién entra al sitio y a qué carpetas tiene prohibido pasar.
 
-**Ejemplo:**
-```plaintext
-User-agent: *          <-- Aplica a TODOS los robots
-Allow: /               <-- Tienen permiso para entrar a todo el sitio
+**Tu archivo `robots.txt`:**
+Aunque en GitHub Pages (modo proyecto) este archivo tiene limitaciones, es vital tenerlo listo para cuando uses un dominio propio.
 
-# Es buena práctica indicar aquí dónde está el mapa del sitio
-Sitemap: https://puertosprimemeat.ar/sitemap.xml
+```plaintext
+User-agent: *
+Allow: /
+Sitemap: https://mauriciobelforte.github.io/mi-portfolio/sitemap.xml
 ```
 
 ### B. La etiqueta `<meta name="robots">` (La Orden para cada Página)

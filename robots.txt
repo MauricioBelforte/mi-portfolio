@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Mapa del sitio (Ajustaremos la URL en el siguiente paso)
+Sitemap: https://mauriciobelforte.github.io/mi-portfolio/sitemap.xml
