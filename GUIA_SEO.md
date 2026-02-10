@@ -249,11 +249,7 @@ Google no puede "ver" las imágenes como un humano, por lo que necesita el texto
 
 ---
 
-## 10. Optimización de Rendimiento y Core Web Vitals (NUEVO)
-
-Google no solo se fija en el contenido, sino también en la **experiencia del usuario** al navegar tu web. Las "Core Web Vitals" son métricas que miden la velocidad de carga, la interactividad y la estabilidad visual. Mejorarlas puede darte un impulso en los rankings.
-
-### A. Datos Estructurados (Schema.org) - El DNI de tu negocio
+## 10. Datos Estructurados (Schema.org) - El DNI de tu negocio
 
 **Función:** Es un código (normalmente JSON-LD) que le explica a Google de qué trata tu negocio de forma estructurada. No es solo texto, es un "Servicio Legal" con dirección, teléfono, etc. Esto es **crucial** para el SEO local y para aparecer en fichas de negocio enriquecidas.
 
@@ -283,7 +279,7 @@ ACA VAMOS A DETALLAR ESTA PARTE EN LA GUÍA DE DATOS ESTRUCTURADOS, PORQUE ES UN
 
   ---
 
-  ## 1. El Código Implementado
+  ## I. El Código Implementado
 
   Actualmente, tu sitio cuenta con una estructura "Multi-Entidad". Esto significa que le estamos presentando a Google dos conceptos diferentes al mismo tiempo dentro del mismo script:
   1.  **El Sitio Web** (como plataforma digital).
@@ -331,7 +327,7 @@ ACA VAMOS A DETALLAR ESTA PARTE EN LA GUÍA DE DATOS ESTRUCTURADOS, PORQUE ES UN
 
   ---
 
-  ## 2. Desglose de la Estrategia
+  ## II. Desglose de la Estrategia
 
   Aquí te explico por qué cada parte es vital para tu SEO:
 
@@ -359,7 +355,7 @@ ACA VAMOS A DETALLAR ESTA PARTE EN LA GUÍA DE DATOS ESTRUCTURADOS, PORQUE ES UN
 
   ---
 
-  ## 3. Cómo Validar este Código
+  ## III. Cómo Validar este Código
 
   Siempre que hagas cambios en este bloque, debes verificar que Google lo entienda sin errores.
 
@@ -372,8 +368,7 @@ ESTE ES EL FINAL DEL DETALLE DE LA ESTRATEGIA DE DATOS ESTRUCTURADOS, EL RESTO D
 
 ---
 
-
-### B. Evitar Saltos en el Diseño (CLS - Cumulative Layout Shift)
+## 11. Evitar Saltos en el Diseño (CLS - Cumulative Layout Shift)
 
 **El Problema:** La página carga y, de repente, los elementos (texto, botones) se mueven porque una imagen acaba de aparecer. Esto es molesto y Google lo penaliza.
 
@@ -383,7 +378,9 @@ ESTE ES EL FINAL DEL DETALLE DE LA ESTRATEGIA DE DATOS ESTRUCTURADOS, EL RESTO D
 <img src="imagenes/logo.png" alt="Logo del Estudio" width="50" height="50">
 ```
 
-### C. Carga Rápida de Imágenes (Lazy Loading)
+---
+
+### 12. Carga Rápida de Imágenes (Lazy Loading)
 
 **El Problema:** Tu página intenta cargar todas las imágenes a la vez, incluso las que están al final (como en el footer). Esto ralentiza la carga inicial.
 
@@ -393,7 +390,7 @@ ESTE ES EL FINAL DEL DETALLE DE LA ESTRATEGIA DE DATOS ESTRUCTURADOS, EL RESTO D
 <img src="imagenes/whatsapp.png" alt="WhatsApp" width="50" height="50" loading="lazy">
 ```
 
-### D. Optimizar la Carga de Fuentes (LCP - Largest Contentful Paint)
+## 13. Optimizar la Carga de Fuentes (LCP - Largest Contentful Paint)
 
 **El Problema:** El navegador espera a descargar una fuente personalizada (`@font-face`) antes de mostrar el texto, lo que deja partes de la página en blanco por un momento.
 
@@ -407,9 +404,8 @@ ESTE ES EL FINAL DEL DETALLE DE LA ESTRATEGIA DE DATOS ESTRUCTURADOS, EL RESTO D
 }
 ```
 
----
 
-## 11. Accesibilidad y SEO: El Atributo `aria-label`
+## 14. Accesibilidad y SEO: El Atributo `aria-label`
 
 **Ubicación:** En etiquetas de enlace (`<a>`) o botones (`<button>`) que no tienen texto visible.
 **Función:** Proporciona una descripción textual para elementos que son puramente visuales, como un ícono.
@@ -437,9 +433,8 @@ Un enlace que solo contiene un ícono de Instagram es invisible para Google.
 </a>
 ```
 
----
 
-## 12. URLs SEO-Friendly: El Camino Correcto
+## 15. URLs SEO-Friendly: El Camino Correcto
 
 **Ubicación:** En la estructura de carpetas y nombres de archivo.
 **Función:** Las URLs son la primera impresión que Google tiene de qué trata una página. Una URL clara y descriptiva ayuda tanto a Google como a los usuarios a entender el contenido.
@@ -469,9 +464,8 @@ https://estudiolaunes.com.ar/blog/como-redactar-un-testamento/
 - Evita parámetros de consulta (`?id=`, `&cat=`) siempre que sea posible
 - Una vez que publiques una URL, no la cambies sin redirigir (301) la antigua a la nueva
 
----
 
-## 13. Investigación de Palabras Clave y Estrategia
+## 16. Investigación de Palabras Clave y Estrategia
 
 **Ubicación:** En todo el contenido (títulos, descripción, encabezados, párrafos).
 **Función:** Conectar tu web con lo que la gente realmente busca en Google.
@@ -504,9 +498,8 @@ Si tu palabra clave es "asesoría legal empresarial", úsala así:
 
 **Herramientas útiles:** Google Keyword Planner (gratis), Ubersuggest, SEMrush, Ahrefs.
 
----
 
-## 14. Internal Linking (Enlaces Internos): Conecta tu Sitio
+## 17. Internal Linking (Enlaces Internos): Conecta tu Sitio
 
 **Ubicación:** En el contenido, navegación y footer.
 **Función:** Guiar tanto a Google como a los usuarios hacia las páginas más importantes de tu sitio.
@@ -539,9 +532,8 @@ Un site bien enlazado internamente mejora significativamente el SEO.
 - Enlaza páginas relacionadas entre sí (contexto relevante)
 - Usa siempre el anchor text natural, que contenga palabras clave cuando sea posible
 
----
 
-## 15. HTTPS/SSL: La Seguridad que Google Recompensa
+## 18. HTTPS/SSL: La Seguridad que Google Recompensa
 
 **Ubicación:** En la configuración del servidor/hosting.
 **Función:** Proteger los datos de los usuarios y ganar la confianza de Google.
@@ -567,9 +559,8 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 ```
 
----
 
-## 16. Google Search Console y Google Analytics: Los Datos Son Poder
+## 19. Google Search Console y Google Analytics: Los Datos Son Poder
 
 **Ubicación:** Configuración externa (no en el código HTML, aunque necesitas código de verificación).
 **Función:** Monitorear la salud de tu sitio en Google y entender cómo los usuarios interactúan con él.
@@ -609,9 +600,8 @@ Ambas requieren un código de verificación en tu HTML:
 
 Sin estos datos, trabajas a ciegas. Es obligatorio para cualquier estrategia SEO seria.
 
----
 
-## 17. Contenido de Calidad y Profundidad
+## 20. Contenido de Calidad y Profundidad
 
 **Ubicación:** En el `<body>` de la página.
 **Función:** Proporcionar valor real a los usuarios y ganar la confianza de Google.
@@ -648,9 +638,8 @@ Además, según el último fallo de la Cámara Nacional de Apelaciones del Traba
 en 2024, las empresas deben... [continúa con información específica y útil]
 ```
 
----
 
-## 18. Schema.org y Breadcrumbs: Estructura Explícita para Google
+## 21. Schema.org y Breadcrumbs: Estructura Explícita para Google
 
 **Ubicación:** En el `<head>` del HTML, dentro de etiquetas `<script type="application/ld+json">`.
 **Función:** Decirle a Google exactamente qué tipo de información contiene tu página, de forma estructurada.
@@ -698,9 +687,8 @@ También puedes mostrar visualmente estos breadcrumbs en el HTML:
 </nav>
 ```
 
----
 
-## 19. Mobile-First Indexing: Prioridad en Móvil
+## 22. Mobile-First Indexing: Prioridad en Móvil
 
 **Ubicación:** En la estructura HTML y CSS.
 **Función:** Asegurar que tu sitio funciona perfectamente en móviles, porque Google lo prioriza.
@@ -731,9 +719,8 @@ Google ahora indexa principalmente la versión móvil de los sitios, no la deskt
 
 6. **Prueba:** Usa el Mobile-Friendly Test de Google para verificar
 
----
 
-## 20. Meta Robots Avanzado: Control Granular
+## 23. Meta Robots Avanzado: Control Granular
 
 **Ubicación:** En el `<head>` de cada página HTML.
 **Función:** Dar órdenes muy específicas a Google sobre cómo indexar cada página.
@@ -776,9 +763,8 @@ Google ahora indexa principalmente la versión móvil de los sitios, no la deskt
 | `noindex, follow` | Páginas de filtros, facetas, páginas de categoría duplicadas |
 | `noimageindex` | Galerías donde no quieres que Google indexe imágenes |
 
----
 
-## 21. Legibilidad y Formato: SEO Visible al Usuario
+## 24. Legibilidad y Formato: SEO Visible al Usuario
 
 **Ubicación:** En la estructura y presentación visual del contenido.
 **Función:** Facilitar que tanto Google como los usuarios entiendan y consuman tu contenido.
