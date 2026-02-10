@@ -164,15 +164,17 @@ Cuando subas la web a tu dominio final, permite la entrada a Google para que la 
 **¿Por qué es necesario?**
 A veces los robots no encuentran todas las páginas si no están bien enlazadas entre sí. El Sitemap es como entregarles un mapa turístico para asegurarse de que visiten todos los puntos de interés, incluso los más escondidos.
 
-**Ejemplo:**
+**Tu Sitemap (`sitemap.xml`):**
+Al ser una web de una sola página (Single Page), el archivo es sencillo pero fundamental para declarar la URL canónica y la fecha de actualización.
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://estudiolaunes.com.ar/</loc>
-      <lastmod>2024-05-16</lastmod> <!-- Fecha de última modificación -->
+      <loc>https://mauriciobelforte.github.io/mi-portfolio/</loc>
+      <lastmod>2025-02-10</lastmod>
+      <priority>1.0</priority>
    </url>
-   <!-- Aquí irían otras páginas internas si las tuvieras -->
 </urlset>
 ```
 *   **Tip:** Existen generadores online (como xml-sitemaps.com) que crean este archivo automáticamente.
