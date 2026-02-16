@@ -134,11 +134,11 @@ export async function generarContexto(mensajeDelUsuario) {
     ];
 
     const formacion = [
+        { titulo: "Microsoft Certified: Azure Data Fundamentals (DP-900)", institucion: "Microsoft", periodo: "Marzo 2025", detalle: "Certificación que valida el conocimiento fundamental de los conceptos de datos y servicios de Microsoft Azure." },
         { titulo: "Analista Programador Universitario", institucion: "Facultad de Informática, UNPSJB", estado: "En curso" },
         { titulo: "Ingeniería Electrónica", institucion: "Facultad de Ingeniería, UNLP", estado: "Incompleto (3 años finalizados)" },
         { titulo: "Técnico en Equipos e Instalaciones Electromecánicas", institucion: "Escuela Industrial N°5 Río Turbio", periodo: "2004-2007" },
         { titulo: "Curso de Inteligencia Artificial (Digitalers)", institucion: "Telecom / Educacion.IT", periodo: "Mayo - Noviembre 2025", detalle: "Python, SQL, Machine Learning, Prompt Engineering." },
-        { titulo: "Microsoft Certified: Azure Data Fundamentals (DP-900)", institucion: "Microsoft", periodo: "Marzo 2025" },
         { titulo: "Bootcamp Premium de Desarrollo Web Frontend", institucion: "CódigoFacilito", periodo: "Abril 2025" },
         { titulo: "Bootcamp de Bases de Datos en la nube con Azure", institucion: "CódigoFacilito", periodo: "Diciembre 2024" },
         { titulo: "Full-Stack Developer Node.js", institucion: "Programa Codo a Codo 4.0", periodo: "Septiembre 2024", detalle: "Node.js, Express, MySQL, Git." },
@@ -168,6 +168,7 @@ export async function generarContexto(mensajeDelUsuario) {
     const keywordsExperiencia = ["experiencia", "laboral", "trayectoria", "puestos", "empleos", "trabajos anteriores", "antiguedad"];
     const keywordsSoftSkills = ["habilidades blandas", "soft skills", "fortalezas", "cualidades", "personalidad", "equipo", "comunicacion", "empatia"];
     const keywordsIdiomas = ["idioma", "ingles", "inglés", "español", "lenguas"];
+    const keywordsMicrosoft = ["azure", "dp-900", "dp900", "microsoft", "cloud", "nube"];
 
     // lógica modular
     /*Este objetoTrabajo se lo declara aca para usar en el anteultimo else if, no tenia otra posibilidad por ahora */
@@ -201,6 +202,10 @@ export async function generarContexto(mensajeDelUsuario) {
 
     } else if (keywordsIdiomas.some(k => mensajeDelUsuarioEnMinuscula.includes(k))) {
         contexto = `Idiomas: ${perfil.idiomas.join(", ")}`;
+
+    } else if (keywordsMicrosoft.some(k => mensajeDelUsuarioEnMinuscula.includes(k))) {
+        const cert = formacion.find(f => f.titulo.includes("Azure"));
+        contexto = `Certificación Destacada:\n- ${cert.titulo}\n- Institución: ${cert.institucion}\n- Fecha: ${cert.periodo}\n- Detalle: ${cert.detalle}`;
 
         // Sobre Mauricio (nombre, experiencia, contacto, etc.)
     } else if (keywords.some(palabra => mensajeDelUsuarioEnMinuscula.toLowerCase().includes(palabra))) {
