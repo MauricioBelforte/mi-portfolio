@@ -9,6 +9,8 @@ import { generarContexto } from "./lib/extraerContexto.js";
 import { generarPromptSistema, generarPromptUsuario } from "./lib/armarPrompts.js";
 
 
+// Variable para guardar el historial de la conversación
+let historial = [];
 
 
 /// Escuchando el click en el icono
@@ -51,7 +53,8 @@ async function enviarMensaje() {
   if (!mensajeDelUsuario) return;
 
   const contexto = await generarContexto(mensajeDelUsuario);
-  const promptUsuario = generarPromptUsuario(contexto, mensajeDelUsuario);
+  // Pasamos el historial actual a la función que arma el prompt
+  const promptUsuario = generarPromptUsuario(contexto, mensajeDelUsuario, historial);
   const promptSistema = generarPromptSistema("asistente virtual");
 
   console.log(promptUsuario);
@@ -94,6 +97,11 @@ async function enviarMensaje() {
     const mensajeDelModelo = formatearRespuestaBot(data.respuesta);
     console.log("Este es el mensaje del modelo", mensajeDelModelo)
     agregarMensaje("bot", mensajeDelModelo, true); // Si hay HTML
+
+    // Guardamos los mensajes en el historial para la próxima vez
+    historial.push({ role: "Usuario", contenido: mensajeDelUsuario });
+    historial.push({ role: "Asistente", contenido: data.respuesta });
+
   } catch (error) {
     mensajeLoading.remove();
     agregarMensaje("bot", "Lo siento, hubo un error al procesar la respuesta.", false);
@@ -194,7 +202,3 @@ function mostrarAnimacionRespondiendo() {
 
   return contenedor;
 }
-
-document.getElementById("chat-icon").addEventListener("click", () => {
-
-});

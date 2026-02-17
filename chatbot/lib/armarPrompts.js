@@ -1,6 +1,12 @@
-export function generarPromptUsuario(contexto, mensajeDelUsuario) {
+export function generarPromptUsuario(contexto, mensajeDelUsuario, historial = []) {
+  // Convertimos el arreglo de objetos a un texto legible
+  const textoHistorial = historial.map(msg => `${msg.role}: ${msg.contenido}`).join("\n");
+
   return `
 Contexto:\n${contexto}
+
+Historial de conversación reciente:
+${textoHistorial}
 
 Si no encontrás una respuesta a la pregunta del usuario, generá un resumen breve del contexto, manteniendo la claridad y el tono informativo.
 
